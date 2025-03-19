@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     const nav =document.querySelector("nav"); 
     
     menuBar.addEventListener("click",()=>{
-        menuBar.classList.toggle("active");
-        nav.classList.toggle("active");
+        menuBar.classList.toggle("menu-open");
+        nav.classList.toggle("menu-open");
     })
 })

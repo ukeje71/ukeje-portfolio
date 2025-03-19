@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slanted Background</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* First background */
+        .bg-1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #3498db; /* Blue */
+            clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 70%);
+        }
+
+        /* Second background */
+        .bg-2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #2c3e50; /* Dark Blue */
+            clip-path: polygon(0 70%, 100% 100%, 100% 100%, 0 100%);
+        }
+
+        /* Content */
+        .content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            font-size: 2rem;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-1"></div>
+    <div class="bg-2"></div>
+    <div class="content">
+        <h1>Slanted Background Design</h1>
+        <p>This is a two-background effect using CSS.</p>
+    </div>
+</body>
+</html>

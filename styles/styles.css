@@ -1,69 +1,281 @@
 /* LINKING RESET */
 @import url("./reset\ css");
 
-
-:root{
-  --primary-color:black;
-  --secondary-color:white;
-  --intermidate-color:grey;
+:root {
+  --primary-color: #fff;
+  --secondary-color: #111;
+  --intermidate-color: grey;
 }
 
-*{
-    margin: 0%;
-    padding: 0%;
+* {
+  margin: 0%;
+  padding: 0%;
 }
-/* body{
- 
 
-} */
+a {
+  text-decoration: none;
+}
 
-header{
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.bg-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 40%);
+}
+
+/* Content */
+.content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  font-size: 2rem;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+header {
   display: flex;
-  margin: 0 auto; 
-  justify-content:space-evenly;
-  gap:100px;
-  nav{
+  margin: 0 auto;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+/* ====== MOBILE Responsiveness ====== */
+@media screen and (min-width: 320px) and (max-width: 667px) {
+  header {
+    padding: 10px;
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+    align-items: center;
+    top: 0;
+    z-index: 10;
+  }
+  .link-list a {
+    font-size: large;
+    text-align: center;
+    color: #fff;
+  }
+
+  .link-list a:nth-child(4) {
+    background-color: #fff;
+    padding: 10px;
+    color: #000;
+  }
+
+  .Hero-page {
+    background-image: url(../Tawian.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 50%;
+  }
+  .intro {
+    min-height: 100vh;
+    text-align: center;
+    align-content: center;
+  }
+  .intro-img {
+    display: none;
+    visibility: hidden;
+  }
+
+  nav {
+    display: flex; /* Keeps layout but hidden */
+    opacity: 0;
+    pointer-events: none;
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.74);
+    top: 9%;
+    left: 0;
+    justify-content: space-evenly;
+    gap: 45px;
+    border-top: 2px solid #fff;
+    font-size: 2em;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  nav.menu-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .menu-bar {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    border: 2px solid var(--primary-color);
+    padding: 5px;
+    transition: 0.2s ease-in;
+  }
+
+  .bar {
+    height: 3px;
+    width: 20px;
+    background-color: var(--primary-color);
+    margin: 5px 0;
+    transition: 0.3s ease;
+  }
+
+  /* Hamburger Animation */
+  .menu-bar.menu-open .bar:nth-child(1) {
+    transform: translateY(13px) rotate(45deg);
+    background-color: #fff;
+  }
+
+  .menu-bar.menu-open .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-bar.menu-open .bar:nth-child(3) {
+    transform: translateY(-13px) rotate(-45deg);
+    background-color: #fff;
+  }
+
+  .intro {
+    color: #fff;
+    h6 {
+      font-size: 1.5em;
+      font-weight: lighter;
+    }
+    h1 {
+      font-size: 2.5em;
+      padding-top: 1rem;
+    }
+    p {
+      letter-spacing: 3px;
+      font-size: 1.5rem;
+    }
+    .intro-ul {
+      display: flex;
+      justify-self: center;
+      gap: 20px;
+      padding-top: 2rem;
+    }
+  }
+}
+
+/* =======TABLET RESPONSIVENESS ======= */
+@media screen and (min-width: 668px) {
+  body {
+    background-color: rgba(128, 128, 128, 0.205);
+  }
+  img {
+    background-color: #000;
+  }
+
+  header {
+    gap: 260px;
+  }
+  header nav {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    font-size: small;
+  }
+  nav a {
+    color: #000;
+  }
+
+  nav a:nth-child(4) {
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 20px;
+  }
+  .menu-bar {
+    display: none;
+  }
+
+  .Hero-page {
     display: flex;
     justify-content: space-between;
-    gap: 40px;
-    justify-items: flex-end;
+    gap: 30px;
+    margin: 50px;
+  }
+  .intro {
+    h6 {
+      font-size: 2em;
+      padding-bottom: 5rem;
+    }
+    h1 {
+      font-size: 3.5em;
+    }
+    p {
+      font-size: medium;
+      padding-top: 3rem;
+      color: grey;
+    }
+  }
+  .intro-ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-top: 3rem;
+  }
+  .intro-ul li {
+    box-shadow: 1px 1px 1px 1px grey;
+    padding: 10px;
+    animation: 0.2s;
+  }
+  .intro-ul li:hover {
+    scale: 1.2;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .berries {
+    display: block;
+    background-color: #111111de;
+    color: #fff;
+    padding: 50px;
+    text-align: justify;
+  }
+
+  .berries p:nth-child(1) {
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 1rem;
+  }
+  .berries button {
+    border: none;
+    background: transparent;
+    color: #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
+    padding: 10px;
+    margin-top: 3rem;
   }
 }
 
-/* Responsiveness  */
-@media screen and (min-width: 120px) {
+/* ======DESKTOP RESPONSIVENESS ======= */
 
-  header{
+@media screen and (min-width: 900px) {
+  header {
     justify-content: space-between;
   }
-.off-screen{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items:center ;
-  position: fixed;
-  width: 100%;
-  max-width: 450px;
-  height: 100vh;
-  right: -450px;
-  top: 0;
-  background-color: black;
-  transition: 0.3s ease-in;
-font-size: 2em;
-}
 
-.off-screen.active{
-  right: 0;
-}
+  .intro {
+    padding-top: 5rem;
+  }
 
-.menu-bar{
-  display: flex;
-  flex-direction: column-reverse;
-}
-.menu-bar  .bar{
-width: 25px; 
-height: 1.9px;
-background: blue;
-margin: 2px ;
-}
+  img {
+    width: 25vw;
+    height: 100%;
+  }
 }
