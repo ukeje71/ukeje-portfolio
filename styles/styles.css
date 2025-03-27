@@ -71,6 +71,9 @@ header {
 .berry:hover{
   scale: 1.03;
 }
+footer .to-tp{
+  transform: translateX(20px) rotate(90deg);
+}
 
 /* ====== MOBILE Responsiveness ====== */
 @media screen and (min-width: 120px) and (max-width: 667px) {
@@ -257,17 +260,7 @@ text-align: center;
   padding-bottom: 1.5rem;
 }
   }
-  .p-btn{
-    border: 2px solid #000;
-    text-align: center;
-    padding: 10px 20px ;
-    color: #fff;
-  }
-  .p-btn:hover{
-    background-color: #000;
-    color: #fff;
-    transition:  0.3s ease-in;
-  }
+  
   .explorer .a-1{
     border-left: 3px solid var(--secondary-color);
     border-right: 3px solid var(--secondary-color);
@@ -547,7 +540,7 @@ footer a{
     .p-btn{
       border: 2px solid black;
       text-align:center;
-      padding: 10px 50px ;
+      padding: 10px 20px ;
       color: #fff;
       transition: 0.3s ease-in;
     }
@@ -602,7 +595,6 @@ color: darkblue;
     img{
       width: 35vw;
     height: 25vh;
-    border-radius:30vw ;
     margin-bottom: 2rem;
     }
 
@@ -860,7 +852,7 @@ footer a{
       fill: #fff;
      }
      footer .foot-txt{
-      color: #000000;
+      /* color: #000000; */
       padding-bottom: 2rem;
       font-weight:bold;
      }
@@ -924,7 +916,7 @@ footer a{
   img{
     width: 25vw;
   height: 45vh;
-  border-radius:65% ;
+  /* border-radius:65% ; */
   }
 }
 }
