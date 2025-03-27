@@ -59,6 +59,19 @@ header {
 }
 }
 
+.berry-head {
+   color: #333; 
+   text-align: center; }
+.berry {
+   background: white; 
+   padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px; 
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); }
+.berry:hover{
+  scale: 1.03;
+}
+
 /* ====== MOBILE Responsiveness ====== */
 @media screen and (min-width: 120px) and (max-width: 667px) {
   header {
@@ -175,7 +188,7 @@ header {
       display: flex;
       justify-self: center;
       gap: 20px;
-      padding-top: 2rem;
+      padding: 2rem;
     }
   }
   #flex{
@@ -245,12 +258,16 @@ text-align: center;
 }
   }
   .p-btn{
-    border: 2px solid black;
+    border: 2px solid #000;
     text-align: center;
-    padding: 5px 20px ;
+    padding: 10px 20px ;
     color: #fff;
   }
-
+  .p-btn:hover{
+    background-color: #000;
+    color: #fff;
+    transition:  0.3s ease-in;
+  }
   .explorer .a-1{
     border-left: 3px solid var(--secondary-color);
     border-right: 3px solid var(--secondary-color);
@@ -441,6 +458,9 @@ footer a{
      footer .foot-ul a{
       fill: #fff;
      }
+     footer .foot-ul a:hover{
+      fill: #000;
+     }
      footer .foot-txt{
       color: #fff;
       padding-bottom: 2rem;
@@ -523,19 +543,18 @@ footer a{
       padding-top: 1rem;
       font-weight:bolder;
     }
-
+  }
     .p-btn{
       border: 2px solid black;
-      text-align: justify;
-      padding: 5px 20px ;
+      text-align:center;
+      padding: 10px 50px ;
       color: #fff;
-      display: flex;
-      margin: 20px 0px;
-      width: 55%;
+      transition: 0.3s ease-in;
     }
-    .p-btn :hover{
- background: #50b0ff;
- color: #000;
+    .p-btn:hover{
+ background-color: #000;
+ color: #fff;
+ border:  2px solid #fff;
     }
 
     .intro-p:nth-child(2){
@@ -549,7 +568,7 @@ footer a{
       background: darkblue;
       text-shadow: none;
     }
-  }
+
   .intro-p:nth-child(2):hover{
 color: darkblue;
  background-color: #fff;
@@ -559,6 +578,7 @@ color: darkblue;
     flex-direction: row;
     gap: 20px;
     padding-top: 2rem;
+    padding-bottom: 2rem;
     fill:#000; 
   }
   .intro-ul li {
@@ -575,15 +595,15 @@ color: darkblue;
   }
 
   .intro-img{
-    margin-top: 3rem;
     width: 30vw;
     height: 30vh;
     background-position: center;
 
     img{
       width: 35vw;
-    height: 30vh;
+    height: 25vh;
     border-radius:30vw ;
+    margin-bottom: 2rem;
     }
 
   }
@@ -896,15 +916,15 @@ footer a{
 
 
 .intro-img{
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   width: 30vw;
   height: 30vh;
   background-position: center;
 
   img{
-    width: 30vw;
-  height: 50vh;
-  border-radius:30vw ;
+    width: 25vw;
+  height: 45vh;
+  border-radius:65% ;
   }
 }
 }
